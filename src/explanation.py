@@ -29,15 +29,15 @@ def explain_prediction(rating, sigma, genre, user_history_count):
 
     return f"{confidence_text} {reason}", hype
 
-"""
-CODE EXPLANATION:
-1. explain_prediction():
-   - This acts as the "Translator" layer between Math and English.
-   - Inputs: Raw numbers (Rating 4.5, Sigma 1.2).
-   - Outputs: Human-readable strings ("Solid Bet", "Wildcard").
-   - Logic: 
-     - If Sigma is low (<0.8), it tells the user "We are sure."
-     - If Sigma is high (>1.5), it warns "We don't have much data."
-   - Cold Start Handling: If the user history count is 0, it explicitly tells the user 
-     "We are guessing based on global trends," managing expectations.
-"""
+# """
+# CODE EXPLANATION:
+# 1. explain_prediction():
+#    - This acts as the "Translator" layer between Math and English.
+#    - Inputs: Raw numbers (Rating 4.5, Sigma 1.2).
+#    - Outputs: Human-readable strings ("Solid Bet", "Wildcard").
+#    - Logic: 
+#      - If Sigma is low (<0.8), it tells the user "We are sure."
+#      - If Sigma is high (>1.5), it warns "We don't have much data."
+#    - Cold Start Handling: If the user history count is 0, it explicitly tells the user 
+#      "We are guessing based on global trends," managing expectations.
+# """

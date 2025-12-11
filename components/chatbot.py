@@ -311,16 +311,16 @@ def generate_smart_response(prompt, df):
     return (f"I understand you are asking about **'{topic}'**, but my database is strictly limited to Movie Ratings and Graph Uncertainty metrics.\n\n"
             f"I cannot provide outside information about **{topic}**. Try asking me about 'Sigma' or specific Movie IDs!")
 
-"""
-CODE EXPLANATION:
-1. Session State ('messages'):
-   - Streamlit reruns the script on every click. We use 'st.session_state' to remember chat history so it doesn't disappear.
-2. generate_smart_response():
-   - This is a Rule-Based (Regex) system, not an LLM.
-   - Part 1 (Regex): It looks for numbers (e.g., "500") in your question.
-     - If found, it queries the DataFrame: df[df['movie_id'] == 500].
-     - It returns the EXACT rating and sigma from the model.
-   - Part 2 (Keywords): It checks for words like "Graph", "Sigma", "Cold Start".
-     - It returns pre-written educational definitions.
-   - Part 3 (Fallback): If it doesn't understand, it echoes your topic ("I don't know about X") to sound natural.
-"""
+# """
+# CODE EXPLANATION:
+# 1. Session State ('messages'):
+#    - Streamlit reruns the script on every click. We use 'st.session_state' to remember chat history so it doesn't disappear.
+# 2. generate_smart_response():
+#    - This is a Rule-Based (Regex) system, not an LLM.
+#    - Part 1 (Regex): It looks for numbers (e.g., "500") in your question.
+#      - If found, it queries the DataFrame: df[df['movie_id'] == 500].
+#      - It returns the EXACT rating and sigma from the model.
+#    - Part 2 (Keywords): It checks for words like "Graph", "Sigma", "Cold Start".
+#      - It returns pre-written educational definitions.
+#    - Part 3 (Fallback): If it doesn't understand, it echoes your topic ("I don't know about X") to sound natural.
+# """

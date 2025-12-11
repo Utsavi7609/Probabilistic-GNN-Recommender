@@ -82,16 +82,16 @@ class MockDatabase:
         return pd.DataFrame(enriched)
     
 
-"""
-CODE EXPLANATION:
-1. Purpose: To simulate a real production database (like SQL) for the demo.
-2. PERSONAS: A dictionary of hardcoded 'demo users' (Action Andy, etc.) to show distinct behaviors.
-3. _generate_movie_metadata():
-   - Since the MovieLens dataset only provides IDs (e.g., Movie 500), this function invents titles.
-   - It uses random combinations of words (Thunder + Strike) to create fake movie names.
-   - It assigns random Genres and Colors for the UI cards.
-4. enrich_recommendations():
-   - Takes the raw math output from the GNN (Movie ID: 500, Rating: 4.5).
-   - Joins it with the fake metadata (Title: "Thunder Strike", Genre: "Action").
-   - This turns raw numbers into a product users can understand.
-"""
+# """
+# CODE EXPLANATION:
+# 1. Purpose: To simulate a real production database (like SQL) for the demo.
+# 2. PERSONAS: A dictionary of hardcoded 'demo users' (Action Andy, etc.) to show distinct behaviors.
+# 3. _generate_movie_metadata():
+#    - Since the MovieLens dataset only provides IDs (e.g., Movie 500), this function invents titles.
+#    - It uses random combinations of words (Thunder + Strike) to create fake movie names.
+#    - It assigns random Genres and Colors for the UI cards.
+# 4. enrich_recommendations():
+#    - Takes the raw math output from the GNN (Movie ID: 500, Rating: 4.5).
+#    - Joins it with the fake metadata (Title: "Thunder Strike", Genre: "Action").
+#    - This turns raw numbers into a product users can understand.
+# """

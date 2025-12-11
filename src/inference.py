@@ -59,16 +59,16 @@ def run_inference(model, data, user_id, simulate_cold_start=False):
     
     return df
 
-"""
-CODE EXPLANATION:
-1. run_inference(): The engine that generates predictions.
-   - It takes a specific User ID and pairs it with EVERY movie in the database.
-   - It creates a 'batch' of edges to feed into the GNN.
-2. Cold Start Logic:
-   - If 'simulate_cold_start=True', we manually overwrite the user's features with Zeros.
-   - This proves that GraphSAGE relies on the graph structure (neighbors), not just user ID memorization.
-3. calculate_risk_reduction(): The Metric Calculator.
-   - It counts how many "High Rated" movies have "High Uncertainty".
-   - It returns the percentage of movies we HID from the user because they were too risky.
-   - This gives you the specific "19%" number for your CV.
-"""
+# """
+# CODE EXPLANATION:
+# 1. run_inference(): The engine that generates predictions.
+#    - It takes a specific User ID and pairs it with EVERY movie in the database.
+#    - It creates a 'batch' of edges to feed into the GNN.
+# 2. Cold Start Logic:
+#    - If 'simulate_cold_start=True', we manually overwrite the user's features with Zeros.
+#    - This proves that GraphSAGE relies on the graph structure (neighbors), not just user ID memorization.
+# 3. calculate_risk_reduction(): The Metric Calculator.
+#    - It counts how many "High Rated" movies have "High Uncertainty".
+#    - It returns the percentage of movies we HID from the user because they were too risky.
+#    - This gives you the specific "19%" number for your CV.
+# """

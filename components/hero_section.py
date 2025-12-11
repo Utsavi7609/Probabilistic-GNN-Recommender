@@ -21,11 +21,11 @@ def render_hero():
 
 
 
-"""
-CODE EXPLANATION:
-1. render_hero():
-   - The "Landing Page" component.
-   - Uses centered HTML and custom styling to make the tool look like a SaaS product ("CineMatch AI").
-   - The "Problem/Solution" box frames the project context immediately for the user (or interviewer).
-   - Why: First impressions matter. A clean header makes the project look complete and professional.
-"""
+# """
+# CODE EXPLANATION:
+# 1. render_hero():
+#    - The "Landing Page" component.
+#    - Uses centered HTML and custom styling to make the tool look like a SaaS product ("CineMatch AI").
+#    - The "Problem/Solution" box frames the project context immediately for the user (or interviewer).
+#    - Why: First impressions matter. A clean header makes the project look complete and professional.
+# """

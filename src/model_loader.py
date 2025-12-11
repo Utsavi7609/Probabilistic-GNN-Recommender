@@ -65,17 +65,17 @@ def load_system():
         st.stop()
 
 
-"""
-CODE EXPLANATION:
-1. load_config(): Reads the YAML file to get paths (like 'gnn_model.pth') so we don't hardcode them.
-2. GNN Class: Defines the 'Encoder'.
-   - Uses SAGEConv layers (GraphSAGE) instead of GCNConv.
-   - SAGEConv allows 'Inductive' learning (handling new users not seen during training).
-3. UncertaintyRecommender Class: The main model.
-   - 'to_hetero': Converts the simple GNN to handle Bipartite graphs (User nodes AND Movie nodes).
-   - The 'lin' layer: The final output layer.
-   - Crucially, it outputs 2 values: Mean (Rating) and Sigma (Variance).
-   - F.softplus: A math function that ensures Sigma is always positive (you can't have negative uncertainty).
-4. load_system(): A robust function to load the saved model weights.
-   - It uses 'map_location=cpu' to ensure it runs on your laptop even if trained on a GPU.
-"""
+# """
+# CODE EXPLANATION:
+# 1. load_config(): Reads the YAML file to get paths (like 'gnn_model.pth') so we don't hardcode them.
+# 2. GNN Class: Defines the 'Encoder'.
+#    - Uses SAGEConv layers (GraphSAGE) instead of GCNConv.
+#    - SAGEConv allows 'Inductive' learning (handling new users not seen during training).
+# 3. UncertaintyRecommender Class: The main model.
+#    - 'to_hetero': Converts the simple GNN to handle Bipartite graphs (User nodes AND Movie nodes).
+#    - The 'lin' layer: The final output layer.
+#    - Crucially, it outputs 2 values: Mean (Rating) and Sigma (Variance).
+#    - F.softplus: A math function that ensures Sigma is always positive (you can't have negative uncertainty).
+# 4. load_system(): A robust function to load the saved model weights.
+#    - It uses 'map_location=cpu' to ensure it runs on your laptop even if trained on a GPU.
+# """

@@ -58,14 +58,14 @@ def render_interactive_graph(data, user_id, df_results):
     except Exception as e:
         return f"<div>Error generating graph: {e}</div>"
     
-"""
-CODE EXPLANATION:
-1. render_confidence_bar():
-   - Converts the raw Sigma value (e.g., 1.2) into a visual HTML progress bar.
-   - If Sigma is low, the bar is Green (Safe). If high, it's Orange (Risky).
-2. render_interactive_graph():
-   - Uses the 'PyVis' library to generate a physics simulation.
-   - Nodes: It creates a central 'User Node' and connects 'Movie Nodes' to it.
-   - Force Atlas 2: The physics algorithm that makes connected nodes pull together.
-   - It exports the graph as an HTML snippet, which Streamlit renders in an iframe.
-"""
+# """
+# CODE EXPLANATION:
+# 1. render_confidence_bar():
+#    - Converts the raw Sigma value (e.g., 1.2) into a visual HTML progress bar.
+#    - If Sigma is low, the bar is Green (Safe). If high, it's Orange (Risky).
+# 2. render_interactive_graph():
+#    - Uses the 'PyVis' library to generate a physics simulation.
+#    - Nodes: It creates a central 'User Node' and connects 'Movie Nodes' to it.
+#    - Force Atlas 2: The physics algorithm that makes connected nodes pull together.
+#    - It exports the graph as an HTML snippet, which Streamlit renders in an iframe.
+# """

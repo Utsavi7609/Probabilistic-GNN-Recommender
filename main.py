@@ -394,17 +394,17 @@ if st.button("🚀 Generate Personalization", type="primary", use_container_widt
         render_chatbot(full_df)
 
 
-"""
-CODE EXPLANATION:
-1. Page Layout: Sets up the 'Split Screen' (Data on Left, Chat on Right).
-2. State Management ('results'):
-   - We store the GNN results in 'st.session_state'.
-   - This prevents the app from re-calculating the math every time you type in the chat box.
-   - The 'if button or results' logic ensures the data persists.
-3. Sidebar Logic:
-   - The 'Threshold Slider' controls the variable 'threshold'.
-   - The filtering logic (df[df.sigma < threshold]) runs in real-time.
-   - As you move the slider, the 'safe_movies' list updates instantly.
-4. Integration:
-   - This file ties everything together: loading the model, getting user input, running inference, and rendering the components (Cards, Graph, Chat).
-"""
+# """
+# CODE EXPLANATION:
+# 1. Page Layout: Sets up the 'Split Screen' (Data on Left, Chat on Right).
+# 2. State Management ('results'):
+#    - We store the GNN results in 'st.session_state'.
+#    - This prevents the app from re-calculating the math every time you type in the chat box.
+#    - The 'if button or results' logic ensures the data persists.
+# 3. Sidebar Logic:
+#    - The 'Threshold Slider' controls the variable 'threshold'.
+#    - The filtering logic (df[df.sigma < threshold]) runs in real-time.
+#    - As you move the slider, the 'safe_movies' list updates instantly.
+# 4. Integration:
+#    - This file ties everything together: loading the model, getting user input, running inference, and rendering the components (Cards, Graph, Chat).
+# """

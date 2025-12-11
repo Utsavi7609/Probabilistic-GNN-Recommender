@@ -36,18 +36,18 @@ def render_distribution_plot(df, threshold):
     
     st.pyplot(fig)
 
-"""
-CODE EXPLANATION:
-1. calculate_risk_reduction():
-   - This function generates the "19%" metric for your CV.
-   - It filters the dataframe to find movies that have HIGH ratings (>3.5) but also HIGH uncertainty (> threshold).
-   - These are "False Positives"—movies the AI thinks are good, but is actually guessing about.
-   - We calculate what % of the catalog is filtered out by your safety mechanism.
+# """
+# CODE EXPLANATION:
+# 1. calculate_risk_reduction():
+#    - This function generates the "19%" metric for your CV.
+#    - It filters the dataframe to find movies that have HIGH ratings (>3.5) but also HIGH uncertainty (> threshold).
+#    - These are "False Positives"—movies the AI thinks are good, but is actually guessing about.
+#    - We calculate what % of the catalog is filtered out by your safety mechanism.
 
-2. render_distribution_plot():
-   - Uses Seaborn to plot a Kernel Density Estimate (KDE)—a smooth bell curve.
-   - X-Axis: The Sigma (Uncertainty) score.
-   - Y-Axis: How many movies have that score.
-   - The Vertical Line: Shows the user's current "Trust Threshold".
-   - Purpose: Visualizes the "Exploration-Exploitation" trade-off. Everything to the right of the line is being hidden.
-"""
+# 2. render_distribution_plot():
+#    - Uses Seaborn to plot a Kernel Density Estimate (KDE)—a smooth bell curve.
+#    - X-Axis: The Sigma (Uncertainty) score.
+#    - Y-Axis: How many movies have that score.
+#    - The Vertical Line: Shows the user's current "Trust Threshold".
+#    - Purpose: Visualizes the "Exploration-Exploitation" trade-off. Everything to the right of the line is being hidden.
+# """

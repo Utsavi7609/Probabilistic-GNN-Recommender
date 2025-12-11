@@ -24,13 +24,13 @@ def render_sidebar(num_users):
     return user_id, threshold, cold_start
 
 
-"""
-CODE EXPLANATION:
-1. render_sidebar():
-   - This module isolates the "Control Panel" logic to keep main.py clean.
-   - Manual ID Input: A 'Developer Tool' allowing you to test specific Edge Cases (e.g., User 42 for Cold Start).
-   - Continuous Slider:
-     - Allows float values (e.g., 1.2) for fine-grained control over the Sigma threshold.
-     - Dynamic Feedback: As you slide, it updates the text (Safe vs Experimental) to guide the user.
-   - State Management: When the user changes, we trigger 'del st.session_state['results']' to force a re-calculation.
-"""
+# """
+# CODE EXPLANATION:
+# 1. render_sidebar():
+#    - This module isolates the "Control Panel" logic to keep main.py clean.
+#    - Manual ID Input: A 'Developer Tool' allowing you to test specific Edge Cases (e.g., User 42 for Cold Start).
+#    - Continuous Slider:
+#      - Allows float values (e.g., 1.2) for fine-grained control over the Sigma threshold.
+#      - Dynamic Feedback: As you slide, it updates the text (Safe vs Experimental) to guide the user.
+#    - State Management: When the user changes, we trigger 'del st.session_state['results']' to force a re-calculation.
+# """
