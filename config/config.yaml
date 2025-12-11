@@ -1,0 +1,17 @@
+app_name: "GNN Uncertainty Engine"
+version: "2.1.0-research"
+model:
+  hidden_channels: 64
+ui:
+  theme_color: "#FF4B4B"
+paths:
+  model: "gnn_model.pth"
+  data: "graph_data.pt"
+
+# CODE EXPLANATION:
+# 1. Centralized Configuration:
+#    - Hardcoding paths (like "C:/Users/Name/...") is bad practice.
+#    - We use this YAML file to define relative paths ("gnn_model.pth").
+#    - If we move the project to the Cloud, we only change this file, not the Python code.
+# 2. Model Parameters:
+#    - 'hidden_channels: 64' ensures the frontend matches the architecture the model was trained with.
